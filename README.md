@@ -1,7 +1,5 @@
 # StreetReelsFighter
 
-## 시연영상 & 사진lsFighter
-
 ## 시연영상 & 사진
 
 ### 시작 + 1인모드 챌린지 선택
