@@ -1,5 +1,7 @@
 # StreetReelsFighter
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/1ade4a2a-72c3-42eb-bf2e-7239daa02ea8" />
+
 ## 시연영상 & 사진
 
 ### 시작 + 1인모드 챌린지 선택
