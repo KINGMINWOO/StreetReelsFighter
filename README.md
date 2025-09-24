@@ -1,6 +1,6 @@
 # **Street Reels Fighter👊👊**
 
-## **🥇인텔 직강 최우수 프로젝트 선정**
+## **🥇 [대한상공회의소] Intel Edge AI + SW 아카데미 AI 과정 최우수 프로젝트 선정**
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/1ade4a2a-72c3-42eb-bf2e-7239daa02ea8" />
 
