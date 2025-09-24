@@ -6,6 +6,7 @@
 
 
 ## **👥팀 구성 및 역할**
+### **팀명:뚝's딱's**
 | 팀원       | 역할                                                |
 |------------|---------------------------------------------------|
 | **박진수** | 프로젝트 총괄 및 관리, 점수 계산 로직 구현, GUI |
@@ -19,9 +20,9 @@
 ## **📌 프로젝트 개요**
 **Street Reels Fighter(스릴파)는** 자세 추정 실시간 점수 추산 및 캐릭터 변환 프로그램입니다.
 
-Pose estimation AI(YOLOv8-pose)를 활용하여 사용자의 실시간 포즈와 릴스 챌린지 영상의 포즈를 비교해 점수를 추산합니다. 
+Pose estimation AI(YOLOv8-pose)를 활용하여 사용자의 실시간 포즈와 릴스 챌린지 영상의 포즈를 비교해 점수를 출력합니다. 
 
-또한 기록된 사용자 영상을 캐릭터로 변환할 수 있는 프로그램 입니다.
+또한 사용자 영상의 포즈 데이터를 활용하여 원하는 캐릭터로 변환할 수 있습니다.
 
 이 프로그램을 통해 사용자들로 하여금 단순 숏폼 챌린지 영상 업로드를 넘어 경쟁 플랫폼 경험 기회를 제공하여 글로벌 숏폼 시장 성장에 기여할 수 있을 것으로 기대됩니다.
 
@@ -47,9 +48,41 @@ Pose estimation AI(YOLOv8-pose)를 활용하여 사용자의 실시간 포즈와
    - PC: ubuntu 22.04
    - jetson nano: ubuntu 20.04, Jetpack 4.6.1
    - Raspberry PI + Hailo 8: 24.04
-3. 언어
-4. 도구
-5. 하드웨어
+2. 언어
+   - Python(모델 추론, GUI), C(팬틸트 캠)
+3. 도구
+   - PC: OpenCV + YOLOv8l-pose + RTX 4060
+   - Jetson nano: OpenCV + YOLO11n-pose + DOCKER + Tensor RT
+   - Raspberry PI + Hailo 8: YOLOv8m-pose + GStreamer
+4. 하드웨어
+   - 카메라: Logitech BRIO 4K
+   - 서보모터: MG995
+
+## **📐 System Architechure**
+<img width="1647" height="925" alt="image" src="https://github.com/user-attachments/assets/4f8186dc-f79e-4042-a3a0-43ad578e5d54" />
+
+### 1. S/W Architechure
+- 모델 추론 파이프라인
+  - YOLOv8l-pose를 사용하여 영상 속 사람의 포즈 데이터를 추정.
+  - 원본 영상의 포즈 데이터와 사용자 실시간 영상의 포즈 데이터를 비교하여 점수 계산
+  - 저장된 사용자의 포즈 데이터를 이용해 캐릭터 변환
+- 사용자 추적 알고리즘
+   - 실시간 영상의 사용자 중심 좌표 값의 변화(*A*, *S*, *D*)를 이용해 STM32과 Serial 통신
+- QUI
+   - PyQt5를 이용해 사용자 인터페이스 구성
+   - QML문서로 페이지별 레이아웃 구성
+  
+
+### 2. H/W Architechure
+- 팬틸트
+   - STM32로 서보모터(SG 955)를 제어하여 사용자를 추적
+   - *A*: 카메라 좌측으로
+   - *S*: 카메라 정지
+   - *D*: 카메라 우측으로
+
+## **♾️ Flow Chart**
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/0be56c70-1a36-4c04-87ed-320c457bc601" />
+
 
 ## **🎬시연 영상**
 
