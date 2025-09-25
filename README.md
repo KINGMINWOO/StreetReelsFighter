@@ -39,7 +39,7 @@ Pose estimation AI(YOLOv8-pose)를 활용하여 사용자의 실시간 포즈와
    - Jetson nano, Hailo 8 등의 엣지 디바이스에서 원활한 서비스 제공
 
 ## **📅 프로젝트 일정**
-### **<2024.09.01-2024.09.18>**
+### **<2025.09.01-2025.09.18>**
 <img width="955" height="370" alt="image" src="https://github.com/user-attachments/assets/0b0a438e-e962-4751-b0dc-8367ac773b37" />
 
 
